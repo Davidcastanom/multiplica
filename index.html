@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="MULTIPLICA, plataforma comunitaria de tareas, IA generativa, cine barrial y mentorias para Comuna 3 - Manrique." />
+  <meta name="theme-color" content="#18232e" />
+  <title>MULTIPLICA | Hagamos la tarea</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/community-lab.png" as="image" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <header class="topbar" aria-label="Navegación principal">
+    <a class="brand" href="#inicio" aria-label="MULTIPLICA inicio">
+      <span class="brand-mark">M</span>
+      <span>
+        <strong>MULTIPLICA</strong>
+        <small>por IMPACTO MAKER</small>
+      </span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Abrir menú</span>
+    </button>
+    <nav id="nav" class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="propuesta.html">Propuesta de Valor</a>
+      <a href="#ia">Lab IA</a>
+      <a href="#cine">Cine</a>
+      <a href="#mentores">Mentores</a>
+      <a href="#quioscos">Quioscos</a>
+      <a href="#impacto">Impacto</a>
+    </nav>
+    <button id="themeToggle" class="icon-button" type="button" aria-label="Cambiar modo de color">D</button>
+  </header>
+
+  <main id="contenido">
+    <!-- EDITAR: cambia aqui el titular, slogan y textos principales del inicio. -->
+    <section id="inicio" class="hero section-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">Comuna 3 - Manrique</p>
+        <h1>Hagamos la tarea</h1>
+        <p class="hero-lead">
+          Centro de tareas, laboratorio de IA, cine comunitario y agencia maker juvenil para aprender cerca, crear
+          juntos y mover el barrio.
+        </p>
+        <div class="hero-actions" aria-label="Accesos rápidos">
+          <a class="btn-primary" href="#tarea">Entrar al centro</a>
+          <a class="btn-ghost" href="#quioscos">Ver quioscos</a>
+        </div>
+        <div class="offline-pill" role="status">
+          <span></span> Modo liviano con contenido offline
+        </div>
+      </div>
+
+      <div class="hero-visual" aria-label="Transformación MULTIPLICA">
+        <img class="img-base" src="assets/community-lab.png" alt="Propuesta inicial" />
+        <img class="img-hover" src="assets/ChatGPT Image 11 may 2026, 15_40_46.png" alt="Visión futura MULTIPLICA" />
+        <div class="live-chip chip-a">12 tutorías hoy</div>
+        <div class="live-chip chip-b">Lab IA abierto</div>
+        <div class="live-chip chip-c">Cine barrio 6 PM</div>
+      </div>
+    </section>
+
+    <!-- EDITAR: estas tarjetas son los accesos rapidos. Sus mensajes estan en js/config.js. -->
+    <section class="quick-grid section-shell" aria-label="Herramientas rápidas">
+      <button class="card" data-panel="mentor">
+        <span class="brand-mark">AI</span>
+        <strong>Mentor virtual</strong>
+        <small>Convierte dudas en pasos claros.</small>
+      </button>
+      <button class="card" data-panel="descargas">
+        <span class="brand-mark">PDF</span>
+        <strong>Recursos offline</strong>
+        <small>Guías para baja conectividad.</small>
+      </button>
+      <button class="card" data-panel="proyecto">
+        <span class="brand-mark">MK</span>
+        <strong>Agencia maker</strong>
+        <small>Retos reales con ingresos.</small>
+      </button>
+      <button class="card" data-panel="ruta">
+        <span class="brand-mark">ODS</span>
+        <strong>Ruta de impacto</strong>
+        <small>ODS 4, 9 y 11 en acción.</small>
+      </button>
+    </section>
+
+    <!-- EDITAR: seccion de tareas. Los datos interactivos de botones estan en js/config.js. -->
+    <section id="tarea" class="module section-shell">
+      <div class="section-heading">
+        <p class="eyebrow">Zona colaborativa</p>
+        <h2>Centro “Hagamos la Tarea”</h2>
+        <p>Nuestro motor de talentos: un espacio donde el conocimiento fluye entre pares. Aquí, jóvenes con saberes avanzados guían y apoyan a otros en sus tareas, multiplicando habilidades a través de la enseñanza colaborativa.</p>
+      </div>
+      <div class="workspace">
+        <aside class="task-board" aria-label="Tablero de tareas activas">
+          <h3>Tareas activas</h3>
+          <button class="task-item active" data-task="matematicas">
+            <strong>Fracciones sin miedo</strong>
+            <small>Matemáticas - grado 7</small>
+          </button>
+          <button class="task-item" data-task="lectura">
+            <strong>Lectura en voz alta</strong>
+            <small>Comprensión y memoria</small>
+          </button>
+          <button class="task-item" data-task="maqueta">
+            <strong>Maqueta del barrio</strong>
+            <small>Ciencias sociales + maker</small>
+          </button>
+        </aside>
+        <article class="collab-panel">
+          <div class="panel-head">
+            <div>
+              <h3 id="taskTitle">Fracciones sin miedo</h3>
+              <p id="taskMeta">Mentor: Sara | 4 estudiantes conectados | 25 min</p>
+            </div>
+            <div class="panel-actions" aria-label="Herramientas de pizarra">
+              <button id="addNoteBtn" class="small-action" type="button">+ Nota</button>
+              <input id="imageInput" type="file" accept="image/*" hidden />
+              <button id="addImageBtn" class="small-action" type="button">Subir Imagen</button>
+              <button id="toggleMath" class="small-action" type="button">Funciones ∑</button>
+              <button id="clearBoardBtn" class="small-action" type="button">Limpiar</button>
+              <button id="fullscreenBtn" class="small-action" type="button" aria-label="Pantalla completa">⛶</button>
+              <button class="btn-primary" type="button">Guardar</button>
+            </div>
+          </div>
+          <div id="whiteboard" class="whiteboard" aria-label="Pizarra colaborativa">
+            <canvas id="matrixCanvas"></canvas>
+            <div id="mathTools" class="math-tools" style="display:none" aria-label="Herramientas matemáticas">
+              <button class="math-btn" type="button" data-symbol="+">+</button>
+              <button class="math-btn" type="button" data-symbol="-">−</button>
+              <button class="math-btn" type="button" data-symbol="×">×</button>
+              <button class="math-btn" type="button" data-symbol="÷">÷</button>
+              <button class="math-btn" type="button" data-symbol="=">=</button>
+              <button class="math-btn" type="button" data-symbol="(">( )</button>
+              <button class="math-btn" type="button" data-symbol="frac">a/b</button>
+              <button class="math-btn" type="button" data-symbol="pow">xʸ</button>
+              <button class="math-btn" type="button" data-symbol="sqrt">√</button>
+            </div>
+            <div class="fraction-card" contenteditable="true"> 5/4 = 1 1/4</div>
+            <div class="note note-one" contenteditable="true">Primero buscamos común denominador.</div>
+            <div class="note note-two" contenteditable="true">Dibuja la pizza: 4 partes y 2 partes.</div>
+            <div class="note note-three" contenteditable="true">Resultado: 5/4 = 1 1/4</div>
+          </div>
+          <div class="comment-row">
+            <input id="collaborativeInput" type="text" placeholder="Escribe una duda o avance..." aria-label="Comentario colaborativo" />
+            <button id="sendCommentBtn" type="button">Enviar</button>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="ia" class="module split section-shell">
+      <div class="section-heading">
+        <p class="eyebrow">Laboratorio IA Generativa</p>
+        <h2>Crear, preguntar, prototipar</h2>
+        <p>Prompts guiados para imágenes, guiones, branding, automatización simple y storytelling de proyectos del
+          barrio.</p>
+      </div>
+      <div class="lab-console">
+        <div class="prompt-builder">
+          <!-- ESTRUCTURA PROFESIONAL: Agrupamos para control total del diseño -->
+          <div class="form-group">
+            <label for="promptType">Misión Creativa</label>
+            <select id="promptType">
+              <option value="historia">📖 Historia / Storytelling</option>
+              <option value="imagen">🎨 Imagen Conceptual</option>
+              <option value="guion">🎬 Guion / Podcast</option>
+              <option value="marca">🚀 Marca / Identidad</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="promptTheme">Tema Central</label>
+            <input id="promptTheme" type="text" placeholder="Ej: La huerta, El graffiti..." />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="promptTone">Tono Narrativo</label>
+              <select id="promptTone">
+                <option value="inspirador">Inspirador</option>
+                <option value="tecnico">Técnico</option>
+                <option value="rebelde">Disruptivo</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="promptStyle">Estética Visual</label>
+              <select id="promptStyle">
+                <option value="cyberpunk">Cyberpunk Neón</option>
+                <option value="minimalista">Minimalista Moderno</option>
+                <option value="vintage">Vintage / Retro</option>
+                <option value="organico">Orgánico / Natural</option>
+              </select>
+            </div>
+          </div>
+
+          <button id="buildPrompt" type="button" class="btn-primary">⚡ Generar Prompt Maestro</button>
+        </div>
+        <pre id="promptOutput" aria-live="polite">Actúa como un mentor creativo de Manrique...</pre>
+      </div>
+      <div class="simulator">
+        <h3>Simulador maker</h3>
+        <p>Arrastra la energía del reto para ver qué equipo se activa.</p>
+        <input id="makerRange" type="range" min="1" max="5" value="3" />
+        <div class="maker-output">
+          <span id="makerLevel">Nivel 3</span>
+          <strong id="makerResult">Equipo: diseño + guion + mentoría</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="cine" class="module section-shell">
+      <div class="section-heading">
+        <p class="eyebrow">Cine comunitario</p>
+        <h2>Archivo vivo de Manrique</h2>
+        <p>Microdocumentales, podcast, fotografía, rutas culturales y memoria barrial en un reproductor pensado para
+          datos bajos.</p>
+      </div>
+      <div class="cinema-layout">
+        <div class="player-container">
+          <!-- ESPACIO PARA VIDEO DE YOUTUBE: Reemplazar el src por el enlace del video deseado -->
+          <div class="player">
+            <iframe width="100%" height="100%" 
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+              title="YouTube video player" frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+              allowfullscreen></iframe>
+          </div>
+          <!-- CAPA INFORMATIVA DEL VIDEO -->
+          <div class="video-info-overlay">
+            <div class="video-meta">
+              <span class="v-tag">EN VIVO</span>
+              <span class="v-time">04:28 MIN</span>
+            </div>
+            <h4>Microdoc: “La subida también enseña”</h4>
+            <p>Una mirada a la resiliencia de la ladera en Manrique, narrada por sus propios jóvenes.</p>
+          </div>
+        </div>
+        <div class="timeline" aria-label="Línea de tiempo comunitaria">
+          <button class="time-dot active" data-year="2028">2028</button>
+          <button class="time-dot" data-year="2029">2029</button>
+          <button class="time-dot" data-year="2030">2030</button>
+          <button class="time-dot" data-year="2031">2031</button>
+          <p id="timelineText">Primeros clubes de tareas se reúnen en casas, centros de integración, bibliotecas y
+            espacios
+            publicos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="mentores" class="module section-shell">
+      <div class="section-heading">
+        <p class="eyebrow">Red de mentores</p>
+        <h2>Jóvenes multiplicadores</h2>
+        <p>Una red educativa comunitaria con habilidades, rutas de aprendizaje, badges y niveles colaborativos.
+        </p>
+      </div>
+      <div class="mentor-grid">
+        <article class="mentor-card">
+          <span class="avatar">SA</span>
+          <h3>Sara</h3>
+          <p>Matemáticas visuales, lectura y clubes de niñas maker.</p>
+          <div class="badges"><span>Mentora 2</span><span>ODS 4</span></div>
+        </article>
+        <article class="mentor-card">
+          <span class="avatar">JU</span>
+          <h3>Julián</h3>
+          <p>Guion, cámara, podcast y memoria de la ladera.</p>
+          <div class="badges"><span>Cine barrio</span><span>ODS 11</span></div>
+        </article>
+        <article class="mentor-card">
+          <span class="avatar">MA</span>
+          <h3>Mariana</h3>
+          <p>Prompts, identidad visual y prototipos para emprendimientos.</p>
+          <div class="badges"><span>Lab IA</span><span>ODS 9</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="quioscos" class="module section-shell">
+      <div class="section-heading">
+        <p class="eyebrow">Nodo digital de barrio</p>
+        <h2>Quioscos MULTIPLICA</h2>
+        <p>Ubicación, disponibilidad, eventos, talleres y mentorías conectadas sobre la ladera.</p>
+      </div>
+      <div class="kiosk-map" aria-label="Mapa interactivo de quioscos">
+        <canvas id="networkCanvas" width="900" height="520"></canvas>
+        <button class="kiosk active" style="--x: 10%; --y: 80%" data-kiosk="Cancha de mini fútbol la concordia." data-label="Cancha la concordia"></button>
+        <button class="kiosk" style="--x: 30%; --y: 55%" data-kiosk="Centro de Servicios a la Ciudadanía." data-label="Centro ciudadanía"></button>
+        <button class="kiosk" style="--x: 50%; --y: 65%" data-kiosk="Uva los sueños" data-label="Uva los sueños"></button>
+        <button class="kiosk" style="--x: 85%; --y: 45%" data-kiosk="Cancha sintética el Raizal." data-label="Cancha el Raizal"></button>
+        <button class="kiosk" style="--x: 20%; --y: 35%" data-kiosk="Parque de la rueda" data-label="Parque la rueda"></button>
+        <button class="kiosk" style="--x: 70%; --y: 25%" data-kiosk="Parque Gaitán." data-label="Parque Gaitán"></button>
+        <aside class="kiosk-info">
+          <h3 id="kioskName">Cancha de mini fútbol la concordia.</h3>
+          <p id="kioskStatus">Cra. 31a #70-4, Versalles, Medellín, Manrique, Medellín, Antioquia, Colombia</p>
+        </aside>
+      </div>
+      <div class="google-map-panel">
+        <div class="map-copy">
+          <h3>Mapa territorial propuesto</h3>
+          <p>Este panel puede mostrar Google Maps real</p>
+          <a id="https://www.google.com/maps/d/u/0/edit?mid=1fTqS-UCD_Fun7RJP5HXjvAFTQv7Imtw&usp=sharing"
+            class="ghost-action"
+            href="https://www.google.com/maps/d/u/0/edit?mid=1fTqS-UCD_Fun7RJP5HXjvAFTQv7Imtw&usp=sharing"
+            target="_blank" rel="noreferrer">Abrir zona en Google Maps</a>
+        </div>
+        <div id="googleMap" class="google-map" role="img"
+          aria-label="Mapa de Google Maps con puntos propuestos de Hagamos la Tarea">
+          <iframe
+            src="https://www.google.com/maps/d/u/0/embed?mid=1fTqS-UCD_Fun7RJP5HXjvAFTQv7Imtw&ehbc=2E312F"
+            width="100%" height="100%"></iframe>
+        </div>
+        <div id="mapPointList" class="map-point-list" aria-label="Puntos propuestos de Hagamos la Tarea"></div>
+      </div>
+    </section>
+
+    <!-- EDITAR: cambia los valores data-count para actualizar los indicadores. -->
+    <section id="impacto" class="module section-shell impact">
+      <div class="section-heading">
+        <p class="eyebrow">Dashboard de impacto</p>
+        <h2>Lo que se mueve cuando hacemos la tarea juntos</h2>
+        <p>Indicadores transparentes, participativos y fáciles de compartir con familias, aliados y jóvenes.</p>
+      </div>
+      <div class="impact-grid">
+        <article class="stat"><strong data-count="428">0</strong><span>jóvenes formados</span></article>
+        <article class="stat"><strong data-count="1260">0</strong><span>tareas acompañadas</span></article>
+        <article class="stat"><strong data-count="37">0</strong><span>proyectos activos</span></article>
+        <article class="stat"><strong data-count="18">0</strong><span>ingresos generados</span></article>
+      </div>
+      <div class="ods-container">
+        <div class="section-heading centered">
+          <p class="eyebrow">Compromiso global</p>
+          <h3>Objetivos de Desarrollo Sostenible</h3>
+        </div>
+        <div class="ods-grid">
+          <div class="ods-card" style="--ods-color: var(--magenta);">
+            <div class="ods-number">04</div>
+            <div class="ods-content">
+              <h4>Educación de Calidad</h4>
+              <p>Garantizar una educación inclusiva y equitativa de calidad para todos en el barrio.</p>
+            </div>
+          </div>
+          <div class="ods-card" style="--ods-color: var(--warm);">
+            <div class="ods-number">09</div>
+            <div class="ods-content">
+              <h4>Industria e Innovación</h4>
+              <p>Fomentar la infraestructura digital y la innovación tecnológica desde la ladera.</p>
+            </div>
+          </div>
+          <div class="ods-card" style="--ods-color: var(--sun);">
+            <div class="ods-number">11</div>
+            <div class="ods-content">
+              <h4>Ciudades Sostenibles</h4>
+              <p>Lograr que Manrique sea un entorno inclusivo, seguro y resiliente.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button id="mentorFab" class="mentor-fab" type="button" aria-label="Abrir mentor virtual">AI</button>
+  <dialog id="mentorDialog" class="mentor-dialog">
+    <form method="dialog">
+      <button class="dialog-close" aria-label="Cerrar">x</button>
+    </form>
+    <h2>Mentor virtual MULTIPLICA</h2>
+    <p>Cuéntame la tarea y te la devuelvo como ruta corta: entender, practicar, crear y compartir.</p>
+    <textarea id="mentorInput" rows="4" placeholder="Ej: no entiendo fracciones con diferente denominador"></textarea>
+    <button id="mentorAnswer" type="button">Crear ruta</button>
+    <div id="mentorResponse" class="mentor-response" aria-live="polite"></div>
+  </dialog>
+
+  <footer style="padding: 4rem; text-align: center; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem;">
+    <p>&copy; 2026 MULTIPLICA | Comuna 3 - Manrique, Medellín.</p>
+    <p style="margin-top: 0.5rem; color: var(--warm); font-weight: 800; letter-spacing: 1px;">Impulsado por Impact Maker</p>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
+</html>

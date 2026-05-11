@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Nuestra propuesta de valor en MULTIPLICA. Innovación social y tecnología en Manrique." />
+  <title>Propuesta de Valor | MULTIPLICA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .propuesta-hero {
+      padding-top: 12rem;
+      padding-bottom: 6rem;
+      text-align: center;
+      background: radial-gradient(circle at center, rgba(255, 0, 255, 0.05), transparent 70%);
+    }
+
+    .propuesta-hero h1 {
+      font-size: clamp(3rem, 10vw, 6rem);
+      line-height: 0.9;
+      background: linear-gradient(to right, #fff, var(--magenta));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 30px rgba(255, 0, 255, 0.3));
+      font-weight: 900;
+    }
+
+    .value-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-block: 4rem;
+    }
+
+    .value-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      padding: 3rem;
+      border-radius: var(--radius);
+      border-top: 4px solid var(--magenta);
+      transition: 0.4s;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .value-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 40px rgba(255, 0, 255, 0.1);
+    }
+
+    .value-card h3 {
+      color: var(--magenta);
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .value-cta {
+      margin-top: 2rem;
+      padding: 1rem;
+      background: rgba(255, 0, 255, 0.05);
+      border: 1px solid var(--magenta);
+      color: var(--magenta);
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 0.85rem;
+      text-align: center;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: 0.3s;
+    }
+
+    .value-cta:hover {
+      background: var(--magenta);
+      color: #fff;
+      box-shadow: 0 0 30px rgba(255, 0, 255, 0.4);
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">M</div>
+      <span>MULTIPLICA</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html">Nosotros</a>
+      <a href="propuesta.html" class="active">Propuesta de Valor</a>
+    </nav>
+  </header>
+
+  <main class="section-shell">
+    <section class="propuesta-hero">
+      <p class="eyebrow">Diferencial Radical</p>
+      <h1>Nuestra Propuesta de Valor</h1>
+    </section>
+
+    <section class="value-grid">
+      <div class="value-card">
+        <div>
+          <h3>Para los Jóvenes</h3>
+          <p>No solo aprenden tecnología; se convierten en multiplicadores de talento. Acceden a un ecosistema donde su curiosidad se transforma en ingresos, habilidades certificadas y liderazgo barrial.</p>
+        </div>
+        <a href="https://drive.google.com/your-folder-jovenes" target="_blank" class="value-cta">Ver portafolio Drive</a>
+      </div>
+      <div class="value-card">
+        <div>
+          <h3>Para la Comunidad</h3>
+          <p>Convertimos los quioscos en nodos de conocimiento vivo. Reducimos la brecha digital y académica mediante un sistema de aprendizaje entre pares que fortalece el tejido social de Manrique.</p>
+        </div>
+        <a href="https://multiplica.org/comunidad" target="_blank" class="value-cta">Documentación Social</a>
+      </div>
+      <div class="value-card">
+        <div>
+          <h3>Para los Aliados</h3>
+          <p>Ofrecemos un modelo de innovación social escalable y basado en datos reales de impacto. Somos el puente entre la inversión social y el talento emergente de la ladera.</p>
+        </div>
+        <a href="https://drive.google.com/your-folder-aliados" target="_blank" class="value-cta">Propuesta Técnica</a>
+      </div>
+    </section>
+  </main>
+
+  <footer style="padding: 4rem; text-align: center; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem;">
+    <p>&copy; 2026 MULTIPLICA | Comuna 3 - Manrique, Medellín.</p>
+    <p style="margin-top: 0.5rem; color: var(--warm); font-weight: 800; letter-spacing: 1px;">Impulsado por Impact Maker</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>

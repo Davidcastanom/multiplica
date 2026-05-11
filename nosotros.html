@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Nuestra misión, visión y propósito superior en MULTIPLICA. Método Socrático aplicado a la juventud de Manrique." />
+  <title>Nosotros | MULTIPLICA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .about-hero {
+      padding-top: 12rem;
+      padding-bottom: 6rem;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at center, rgba(0, 240, 255, 0.05), transparent 70%);
+    }
+
+    .about-hero h1 {
+      font-size: clamp(3rem, 10vw, 6rem);
+      line-height: 0.9;
+      margin-top: 1rem;
+      background: linear-gradient(to right, #fff, var(--warm));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 30px var(--warm-shadow));
+      font-weight: 900;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-block: 4rem;
+    }
+
+    .purpose-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      padding: 3rem;
+      border-radius: var(--radius);
+      text-align: center;
+      backdrop-filter: blur(20px);
+      transition: 0.4s;
+    }
+
+    .purpose-card:hover {
+      border-color: var(--warm);
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-glow);
+    }
+
+    .purpose-card h2 {
+      color: var(--warm);
+      margin-bottom: 1.5rem;
+      font-size: 2rem;
+      text-transform: uppercase;
+    }
+
+    .socratic-section {
+      background: linear-gradient(135deg, rgba(255, 0, 255, 0.05), rgba(0, 240, 255, 0.05));
+      border: 1px solid var(--line);
+      padding: 4rem;
+      border-radius: var(--radius);
+      margin-block: 4rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .socratic-section blockquote {
+      font-size: 2.5rem;
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--text);
+      max-width: 25ch;
+      margin-inline: auto;
+      text-shadow: 0 0 20px var(--warm-shadow);
+    }
+
+    .socratic-section p {
+      margin-top: 2rem;
+      color: var(--muted);
+      font-size: 1.2rem;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 6rem;
+    }
+
+    .gallery-item {
+      height: 350px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      transition: 0.5s;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.8s;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .gallery-item:hover {
+      border-color: var(--magenta);
+      box-shadow: 0 0 30px rgba(255, 0, 255, 0.2);
+    }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="brand-mark">M</div>
+      <span>MULTIPLICA</span>
+    </div>
+    <nav class="nav">
+      <a href="index.html">Inicio</a>
+      <a href="nosotros.html" class="active">Nosotros</a>
+      <a href="propuesta.html">Propuesta de Valor</a>
+    </nav>
+  </header>
+
+  <main class="section-shell">
+    <section class="about-hero">
+      <p class="eyebrow">Nuestra Identidad</p>
+      <h1>Propósito que Transforma</h1>
+    </section>
+
+    <section class="about-grid">
+      <div class="purpose-card">
+        <h2>Misión</h2>
+        <p>Empoderar a las juventudes de Manrique mediante el acceso a tecnologías emergentes y metodologías colaborativas, convirtiendo el barrio en un epicentro de innovación social y creativa.</p>
+      </div>
+      <div class="purpose-card">
+        <h2>Visión</h2>
+        <p>Ser reconocidos en 2031 como la red de aprendizaje comunitario más influyente de la ladera de Medellín, exportando talento y proyectos que resuelven retos globales desde la identidad local.</p>
+      </div>
+      <div class="purpose-card">
+        <h2>Metodología</h2>
+        <p>Aprendizaje entre Pares: El motor que multiplica talentos. No dependemos de jerarquías externas; son los jóvenes con conocimientos avanzados quienes guían a sus compañeros, creando una red de apoyo mutuo y crecimiento exponencial.</p>
+      </div>
+    </section>
+
+    <section class="socratic-section">
+      <div class="eyebrow">Método Socrático</div>
+      <blockquote>"No enseñamos respuestas, despertamos preguntas."</blockquote>
+      <p>En MULTIPLICA, el conocimiento no se entrega como un paquete cerrado. Aplicamos la mayéutica: el arte de dar a luz ideas. Invitamos a los jóvenes a descubrir su propio poder a través del diálogo, la curiosidad radical y el cuestionamiento constante de su entorno para transformarlo.</p>
+    </section>
+
+    <section class="section-heading centered">
+      <p class="eyebrow">Memorias Visuales</p>
+      <h2>El barrio en acción</h2>
+    </section>
+    
+    <div class="gallery">
+      <div class="gallery-item">
+        <img src="assets/imagenes/Gemini_Generated_Image_.png" alt="Imagen Generada Gemini">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/imagenes/WhatsApp Image 2026-05-10 at 2.30.17 AM.jpeg" alt="Imagen Actividad 1">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/imagenes/WhatsApp Image 2026-05-10 at 2.30.22 AM (1).jpeg" alt="Imagen Actividad 2">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/imagenes/WhatsApp Image 2026-05-10 at 2.30.22 AM (2).jpeg" alt="Imagen Actividad 3">
+      </div>
+      <div class="gallery-item">
+        <img src="assets/imagenes/WhatsApp Image 2026-05-10 at 2.30.22 AM.jpeg" alt="Imagen Actividad 4">
+      </div>
+    </div>
+  </main>
+
+  <footer style="padding: 4rem; text-align: center; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.9rem;">
+    <p>&copy; 2026 MULTIPLICA | Comuna 3 - Manrique, Medellín.</p>
+    <p style="margin-top: 0.5rem; color: var(--warm); font-weight: 800; letter-spacing: 1px;">Impulsado por Impact Maker</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+
+</html>
