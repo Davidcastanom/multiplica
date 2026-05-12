@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Módulo MULTIPLICA — Proyecto de impacto social 'Hagamos la Tarea' by Impacto Maker.">
+  <title>Módulo MULTIPLICA | Impacto Maker</title>
+  <link rel="icon" type="image/jpeg" href="WhatsApp Image 2026-05-11 at 4.40.33 PM.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="plan_styles.css">
+  <style>
+    /* ── Estilos catálogo de insumos ── */
+    .cat-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .cat-tab {
+      background: var(--gris);
+      border: 1px solid var(--gris2);
+      border-radius: 6px;
+      color: var(--gris3);
+      font-family: var(--font-mono, 'DM Mono', monospace);
+      font-size: 0.7rem;
+      cursor: pointer;
+      padding: 0.4rem 0.8rem;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .cat-tab:hover,
+    .cat-tab.active {
+      background: rgba(45, 219, 129, 0.1);
+      border-color: var(--verde);
+      color: var(--verde);
+    }
+
+    .cat-panel {
+      display: none;
+    }
+
+    .cat-panel.active {
+      display: block;
+      animation: fadeIn 0.2s ease;
+    }
+
+    tr.highlight-admin td {
+      background: rgba(255, 214, 10, 0.05);
+      color: var(--amarillo);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ══════════════════ NAVEGACIÓN ══════════════════ -->
+  <nav>
+    <div class="nav-logo">
+      <img src="WhatsApp Image 2026-05-11 at 4.40.33 PM.jpeg" alt="Multiplica Logo">
+      MULTIPLICA<span>MAKER</span>
+    </div>
+    <button class="active" onclick="mostrarSeccion('resumen',this)">Resumen</button>
+    <button onclick="mostrarSeccion('costos',this)">Costos</button>
+    <button onclick="mostrarSeccion('insumos',this)">📦 Insumos</button>
+    <button onclick="mostrarSeccion('ingresos',this)">Ingresos</button>
+    <button onclick="mostrarSeccion('viabilidad',this)">Viabilidad</button>
+    <button onclick="mostrarSeccion('kpis',this)">KPIs</button>
+    <button onclick="mostrarSeccion('ruta',this)">Ruta 0</button>
+    <button onclick="mostrarSeccion('donantes',this)">Donantes</button>
+    <button onclick="mostrarSeccion('pitch',this)">Pitch</button>
+  </nav>
+
+
+  <!-- ══════════════════════════════════════════════════
+     SECCIÓN 1: RESUMEN EJECUTIVO
+══════════════════════════════════════════════════ -->
+  <section id="resumen" class="active">
+    <div class="section-label">Hagamos la Tarea · Impacto Maker · Medellín</div>
+    <h1>Módulo<br><span style="color:var(--verde)">MULTIPLICA</span></h1>
+    <p style="max-width:600px;margin-bottom:2rem;">Red de nodos comunitarios en parques que combina economía del
+      conocimiento, cultura, deporte e IA para regenerar el tejido social — y financiarse sola. Cifras actualizadas con
+      SMMLV 2026: <strong style="color:var(--verde)">$1.750.905</strong>.</p>
+
+    <div class="grid-3">
+      <div class="metric">
+        <div class="metric-value" style="color:var(--verde)">9</div>
+        <div class="metric-label">Secciones estratégicas</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value" style="color:var(--amarillo); font-size:1.3rem;">$1.750.905</div>
+        <div class="metric-label">SMMLV 2026 (Dec. 1469)</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value" style="color:var(--azul)">Mes 5-7</div>
+        <div class="metric-label">Punto de equilibrio</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value" style="color:var(--naranja)">40+</div>
+        <div class="metric-label">Insumos en catálogo</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value" style="color:var(--verde)">$0</div>
+        <div class="metric-label">Capital inicial requerido</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value" style="color:var(--verde)">9/10</div>
+        <div class="metric-label">Viabilidad con mejoras</div>
+      </div>
+    </div>
+
+    <div class="admin-box">
+      <h3>👤 Administrador de Módulo — Dato clave 2026</h3>
+      <p>Basado en el SMMLV 2026 ($1.750.905), el modelo aplica una <strong>Compensación Flexible por
+          Resultados</strong>. Para no quebrar el proyecto, el administrador gana <strong>1 SMMLV + Bonos de
+          meta</strong> en los meses 3 y 4. Al llegar al mes 6 (equilibrio), salta a <strong>2 SMMLV</strong> e inicia
+        un <strong>Pago Retroactivo</strong> que le devuelve en cuotas el tiempo que trabajó ad honorem en los meses 1 y
+        2. El costo total para el mes 6 es <strong style="color:var(--amarillo)">~$5.8 Millones/mes</strong>.</p>
+    </div>
+
+    <div class="grid-2" style="margin-top:1rem;">
+      <div class="card card-accent">
+        <div class="badge badge-verde">Fortaleza</div>
+        <h3>Modelo circular de talento</h3>
+        <p>Los estudiantes aprenden → se vuelven tutores → generan ingresos → reinvierten → atraen más estudiantes. El
+          administrador los coordina y potencia.</p>
+      </div>
+      <div class="card card-warn">
+        <div class="badge badge-naranja">Riesgo crítico</div>
+        <h3>Arrancar con foco, no con todo</h3>
+        <p>Lanzar con 3 líneas núcleo: insumos + tutorías + WiFi. Agregar una línea cada 3 meses. El administrador debe
+          llegar con el módulo estabilizado, no en el caos del arranque.</p>
+      </div>
+      <div class="card card-info">
+        <div class="badge badge-azul">Nuevo en v2.0</div>
+        <h3>Catálogo de insumos con precios reales</h3>
+        <p>40+ insumos con precio de costo y venta, margen calculado y descripción del uso en tareas escolares. Kits
+          armados listos para vender. Ver sección <strong style="color:var(--azul)">📦 Insumos</strong>.</p>
+      </div>
+      <div class="card card-accent">
+        <div class="badge badge-amarillo">Escalabilidad</div>
+        <h3>Un módulo = un manual</h3>
+        <p>El primer módulo construye el protocolo para replicar en cualquier parque del país. Con administrador formado
+          y catálogo estandarizado, el segundo módulo se abre en la mitad de tiempo.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+     SECCIÓN 2: COSTOS
+══════════════════════════════════════════════════ -->
+  <section id="costos">
+    <div class="section-label">Módulo único · Mes operativo · Cifras 2026 COP</div>
+    <h1>Hoja de<br><span style="color:var(--amarillo)">Costos</span></h1>
+
+    <div class="warn-box">
+      <h3>⚠ Cifras actualizadas con SMMLV 2026</h3>
+      <p>Salario mínimo 2026: <strong>$1.750.905</strong> + Aux. transporte $249.095 = <strong>$2.000.000</strong>
+        ingreso base. Incremento del 23% sobre 2025 (Decretos 1469 y 1470 del 29 dic 2025). Todos los costos laborales
+        calculados sobre esta base.</p>
+    </div>
+
+    <!-- Administrador: renderizado dinámico desde JS -->
+    <div id="admin-desglose" style="margin-top:1.5rem;"></div>
+
+    <h2 style="margin-top:2rem;">Costos Fijos Mensuales</h2>
+    <table>
+      <tr>
+        <th>Ítem</th>
+        <th>Categoría</th>
+        <th>Mínimo</th>
+        <th>Básico</th>
+        <th>Consolidado</th>
+      </tr>
+      <tr>
+        <td>Arriendo local 15-25 m²</td>
+        <td class="cat">Infraestructura</td>
+        <td class="num">$0</td>
+        <td class="num">$800.000</td>
+        <td class="num">$1.200.000</td>
+      </tr>
+      <tr>
+        <td>Servicios (agua, luz, internet)</td>
+        <td class="cat">Infraestructura</td>
+        <td class="num">$100.000</td>
+        <td class="num">$350.000</td>
+        <td class="num">$520.000</td>
+      </tr>
+      <tr>
+        <td>Router WiFi parque (SIM 4G)</td>
+        <td class="cat">Tecnología</td>
+        <td class="num">$85.000</td>
+        <td class="num">$85.000</td>
+        <td class="num">$170.000</td>
+      </tr>
+      <tr class="highlight-admin">
+        <td><strong>Administrador — salario base</strong></td>
+        <td class="cat" style="color:var(--amarillo)">Talento CLAVE</td>
+        <td class="num">$0</td>
+        <td class="num" style="color:var(--amarillo)">$1.750.905</td>
+        <td class="num" style="color:var(--amarillo)">$3.501.810</td>
+      </tr>
+      <tr class="highlight-admin">
+        <td><strong>Carga prestacional admin (~43.65%)</strong></td>
+        <td class="cat" style="color:var(--amarillo)">Legal CLAVE</td>
+        <td class="num">$0</td>
+        <td class="num" style="color:var(--amarillo)">$764.270</td>
+        <td class="num" style="color:var(--amarillo)">$1.528.540</td>
+      </tr>
+      <tr class="highlight-admin">
+        <td><strong>Bonos (Meta de ventas / Retroactivo)</strong></td>
+        <td class="cat" style="color:var(--amarillo)">Comisión</td>
+        <td class="num">$0</td>
+        <td class="num" style="color:var(--amarillo)">$500.000</td>
+        <td class="num" style="color:var(--amarillo)">$800.000</td>
+      </tr>
+      <tr>
+        <td>Fondo tutores jóvenes (pool variable)</td>
+        <td class="cat">Talento Tutores</td>
+        <td class="num">$250.000</td>
+        <td class="num">$650.000</td>
+        <td class="num">$1.500.000</td>
+      </tr>
+      <tr>
+        <td>Contabilidad / asesoría legal básica</td>
+        <td class="cat">Administrativo</td>
+        <td class="num">$0</td>
+        <td class="num">$180.000</td>
+        <td class="num">$300.000</td>
+      </tr>
+      <tr>
+        <td>Plataformas IA (APIs, herramientas)</td>
+        <td class="cat">Tecnología</td>
+        <td class="num">$60.000</td>
+        <td class="num">$190.000</td>
+        <td class="num">$430.000</td>
+      </tr>
+      <tr>
+        <td>Marketing / redes sociales</td>
+        <td class="cat">Comercial</td>
+        <td class="num">$40.000</td>
+        <td class="num">$130.000</td>
+        <td class="num">$250.000</td>
+      </tr>
+      <tr>
+        <td>Fondo imprevistos (5%)</td>
+        <td class="cat">Reserva</td>
+        <td class="num">$27.000</td>
+        <td class="num">$229.000</td>
+        <td class="num">$387.000</td>
+      </tr>
+      <tr class="total-row">
+        <td><strong>TOTAL FIJOS / MES</strong></td>
+        <td></td>
+        <td class="num"><strong>$562.000</strong></td>
+        <td class="num"><strong>$5.629.175</strong></td>
+        <td class="num"><strong>$10.587.350</strong></td>
+      </tr>
+    </table>
+
+    <h2>Costos Variables Mensuales</h2>
+    <table>
+      <tr>
+        <th>Ítem</th>
+        <th>Categoría</th>
+        <th>Mínimo</th>
+        <th>Básico</th>
+        <th>Consolidado</th>
+      </tr>
+      <tr>
+        <td>Insumos creativos/educativos (inventario)</td>
+        <td class="cat">Comercial</td>
+        <td class="num">$250.000</td>
+        <td class="num">$750.000</td>
+        <td class="num">$1.850.000</td>
+      </tr>
+      <tr>
+        <td>Torneos de fútbol (premiaciones, canchas)</td>
+        <td class="cat">Comunitario</td>
+        <td class="num">$100.000</td>
+        <td class="num">$250.000</td>
+        <td class="num">$500.000</td>
+      </tr>
+      <tr>
+        <td>Cine en parque (datos, permisos)</td>
+        <td class="cat">Cultural</td>
+        <td class="num">$60.000</td>
+        <td class="num">$125.000</td>
+        <td class="num">$250.000</td>
+      </tr>
+      <tr>
+        <td>Materiales talleres / asesorías</td>
+        <td class="cat">Formación</td>
+        <td class="num">$0</td>
+        <td class="num">$100.000</td>
+        <td class="num">$250.000</td>
+      </tr>
+      <tr>
+        <td>Transporte / logística</td>
+        <td class="cat">Operaciones</td>
+        <td class="num">$0</td>
+        <td class="num">$75.000</td>
+        <td class="num">$185.000</td>
+      </tr>
+      <tr class="total-row">
+        <td><strong>TOTAL VARIABLES / MES</strong></td>
+        <td></td>
+        <td class="num"><strong>$410.000</strong></td>
+        <td class="num"><strong>$1.300.000</strong></td>
+        <td class="num"><strong>$3.035.000</strong></td>
+      </tr>
+    </table>
+
+    <div class="grid-3">
+      <div class="metric">
+        <div class="metric-value" style="color:var(--verde);font-size:1.3rem;">$972.000</div>
+        <div class="metric-label">Total/mes · Mínimo viable</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value" style="color:var(--amarillo);font-size:1.2rem;">$6.929.175</div>
+        <div class="metric-label">Total/mes · Básico (c/ admin)</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value" style="color:var(--naranja);font-size:1.2rem;">$13.622.350</div>
+        <div class="metric-label">Total/mes · Consolidado</div>
+      </div>
+    </div>
+
+    <h2 style="margin-top:1.5rem;">Inversión Inicial — Dotación</h2>
+
+    <div style="display:flex; flex-wrap:wrap; gap:1.5rem; align-items:flex-start;">
+      <div style="flex:1; min-width:300px;">
+        <table style="margin-bottom:1rem;">
+          <tr>
+            <th>Activo</th>
+            <th>Cant.</th>
+            <th>Costo</th>
+            <th>Prioridad</th>
+          </tr>
+          <tr>
+            <td>Proyector portátil 3500 lúmenes</td>
+            <td>1</td>
+            <td class="num">$580.000</td>
+            <td><span class="badge badge-naranja">Alta</span></td>
+          </tr>
+          <tr>
+            <td>Parlante Bluetooth 40W (exterior)</td>
+            <td>1</td>
+            <td class="num">$320.000</td>
+            <td><span class="badge badge-naranja">Alta</span></td>
+          </tr>
+          <tr>
+            <td>Router 4G + SIM datos 20GB/mes</td>
+            <td>1</td>
+            <td class="num">$220.000</td>
+            <td><span class="badge badge-naranja">Alta</span></td>
+          </tr>
+          <tr>
+            <td>Kit insumos creativos arranque</td>
+            <td>1</td>
+            <td class="num">$500.000</td>
+            <td><span class="badge badge-naranja">Alta</span></td>
+          </tr>
+          <tr>
+            <td>Computador portátil reacondicionado (i3)</td>
+            <td>1</td>
+            <td class="num">$900.000</td>
+            <td><span class="badge badge-naranja">Alta</span></td>
+          </tr>
+          <tr>
+            <td>Mesas plegables x4 + sillas x10</td>
+            <td>1 set</td>
+            <td class="num">$750.000</td>
+            <td><span class="badge badge-azul">Media</span></td>
+          </tr>
+          <tr>
+            <td>Uniformes oficiales (Polos/Chaquetas)</td>
+            <td>6 und</td>
+            <td class="num">$390.000</td>
+            <td><span class="badge badge-verde">Identidad</span></td>
+          </tr>
+          <tr>
+            <td>Materiales menores (Pistola silicona, etc.)</td>
+            <td>1 kit</td>
+            <td class="num">$80.000</td>
+            <td><span class="badge badge-naranja">Alta</span></td>
+          </tr>
+          <tr>
+            <td>Valla / señalética identidad</td>
+            <td>1</td>
+            <td class="num">$260.000</td>
+            <td><span class="badge badge-azul">Media</span></td>
+          </tr>
+          <tr>
+            <td>Gastos constitución entidad</td>
+            <td>—</td>
+            <td class="num">$380.000</td>
+            <td><span class="badge badge-naranja">Alta</span></td>
+          </tr>
+          <tr class="total-row">
+            <td><strong>TOTAL DOTACIÓN MÍNIMA</strong></td>
+            <td></td>
+            <td class="num"><strong>$4.380.000</strong></td>
+            <td></td>
+          </tr>
+        </table>
+
+        <div class="highlight">
+          <h3>💡 Estrategia de dotación sin capital — 2026</h3>
+          <p><strong>Computador:</strong> solicitar a empresas tech o colegios con equipos dados de baja.
+            <strong>Proyector:</strong> comodato con JAC o biblioteca barrial. <strong>Mesas y sillas:</strong> gestión
+            con Alcaldía Local. <strong>Uniformes:</strong> pueden ser financiados por empresas locales (su logo en la
+            manga).</p>
+        </div>
+      </div>
+
+      <div class="card card-accent" style="width:320px; text-align:center; padding:1.2rem; flex-shrink:0;">
+        <div class="badge badge-verde">Identidad Visual</div>
+        <h3 style="margin-bottom:0.8rem;">Uniforme (Prevención de Violencia)</h3>
+        <img src="Promt del proyecto social en contrá la violencia para implemetar.png" alt="Uniforme Multiplica"
+          style="width:100%; border-radius:12px; margin-bottom:1rem; border:1px solid var(--gris2); box-shadow:0 10px 20px rgba(0,0,0,0.5); cursor:zoom-in;"
+          onclick="document.getElementById('image-modal').style.display='flex'; document.getElementById('modal-img').src=this.src;">
+        <p style="font-size:0.8rem; margin-bottom:1rem; color:var(--gris3);">Viste a los jóvenes de autoridad pacífica.
+          Funciona como escudo social en el parque frente a contextos de violencia o estigma.</p>
+        <div style="background:rgba(0,0,0,0.5); border-radius:8px; padding:1rem; border:1px solid var(--line);">
+          <div style="font-size:0.7rem; color:var(--muted); text-transform:uppercase; letter-spacing:1px;">Costo de
+            producción unitario</div>
+          <div class="hero-stat-num"
+            style="font-size:2rem; margin:0.3rem 0; color:var(--sun); text-shadow:var(--glow-verde);">$65.000</div>
+          <div style="font-size:0.75rem; color:var(--muted);">Kit de arranque (6 jóvenes): <strong
+              style="color:var(--blanco);">$390.000</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+     SECCIÓN 3: CATÁLOGO DE INSUMOS (NUEVA)
+══════════════════════════════════════════════════ -->
+  <section id="insumos">
+    <div class="section-label">Propuesta de insumos · Precios mercado Medellín 2026</div>
+    <h1>Catálogo de<br><span style="color:var(--naranja)">Insumos</span></h1>
+
+    <p style="max-width:700px;margin-bottom:1.5rem;">Todos los materiales que el módulo vende a estudiantes para hacer
+      sus tareas. Precios de costo son precios mayoristas (Panafargo, Suescun, distribuidoras Medellín). Los precios de
+      venta incluyen margen operativo para sostener el módulo. El módulo compra al por mayor y vende al detal.</p>
+
+    <div class="highlight" style="margin-bottom:1.5rem;">
+      <h3>📊 Lógica del negocio de insumos</h3>
+      <p>Comprar al mayor + vender al detal = margen promedio del <strong style="color:var(--verde)">68-75%</strong>.
+        Una inversión de $500.000 en inventario genera $850.000-$1.200.000 en ventas en 2-3 semanas. Los kits armados
+        por tipo de tarea tienen el mayor margen porque el estudiante paga por la conveniencia de tener todo junto.
+        <strong>Proveedores clave: Panafargo MDE, Suescun, Distrikayser.</strong></p>
+    </div>
+
+    <!-- Catálogo renderizado dinámicamente desde JS -->
+    <div id="catalogo-insumos"></div>
+
+    <div class="grid-2" style="margin-top:1.5rem;">
+      <div class="card card-info">
+        <div class="badge badge-azul">Estrategia de compra</div>
+        <h3>Comprar al mayor, vender al detal</h3>
+        <ul class="styled">
+          <li>Visitar Panafargo (Medellín) o Suescun para precios mayoristas reales</li>
+          <li>Inventario inicial mínimo: $500.000 en los 5 ítems más pedidos</li>
+          <li>Reposición semanal basada en ventas — nunca sobre-stockear</li>
+          <li>Los kits armados se hacen a pedido para tareas específicas del colegio</li>
+          <li>Negociar crédito a 30 días con el proveedor mayorista desde el mes 2</li>
+        </ul>
+      </div>
+      <div class="card card-accent">
+        <div class="badge badge-verde">Top 5 más vendidos</div>
+        <h3>Insumos de alta rotación escolar</h3>
+        <ul class="styled">
+          <li><strong>Cartulina 1/8 plana</strong> — tareas diarias, alta demanda constante</li>
+          <li><strong>Foami carta colores</strong> — proyectos de artística y manualidades</li>
+          <li><strong>Colores lápiz x12</strong> — útil escolar de compra frecuente</li>
+          <li><strong>Silicona en barra</strong> — consumible de altísima rotación</li>
+          <li><strong>KIT Cartelera Escolar</strong> — exposiciones cada 2-3 semanas por grado</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="admin-box" style="margin-top:1rem;">
+      <h3>📅 Calendario escolar = calendario de ventas</h3>
+      <p>Enero-febrero: <strong>listas escolares</strong> (pico máximo, vender kits completos). Marzo-abril: proyectos
+        de ciencias y sociales (maquetas, dioramas). Mayo-junio: izadas de bandera y exposiciones (carteleras, foami).
+        Agosto: regreso a clases segundo semestre. Octubre-noviembre: ferias y proyectos finales. <strong>Anticipar el
+          inventario 2 semanas antes de cada pico.</strong></p>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+     SECCIÓN 4: INGRESOS
+══════════════════════════════════════════════════ -->
+  <section id="ingresos">
+    <div class="section-label">Proyección conservadora · Módulo 1 · 2026</div>
+    <h1>Mapa de<br><span style="color:var(--verde)">Ingresos</span></h1>
+
+    <p style="margin-bottom:2rem;max-width:600px;">Con el SMMLV 2026 en $1.750.905, los precios de tutorías y servicios
+      se ajustan al poder adquisitivo del barrio. El motor económico sigue siendo tutorías + insumos + servicios IA.</p>
+
+    <h2>Líneas de Ingreso — Proyección Mensual 2026</h2>
+    <table>
+      <tr>
+        <th>Línea</th>
+        <th>Mecanismo</th>
+        <th>Mes 1-2</th>
+        <th>Mes 3-4</th>
+        <th>Mes 6+</th>
+      </tr>
+      <tr>
+        <td><strong>Venta insumos / suministros</strong></td>
+        <td>Margen 65-80% sobre costo mayorista</td>
+        <td class="num">$250.000</td>
+        <td class="num">$750.000</td>
+        <td class="num">$1.850.000</td>
+      </tr>
+      <tr>
+        <td><strong>Tutorías (cuota servicio + fabricación)</strong></td>
+        <td>$18.000-$35.000/sesión · 20-80 sesiones</td>
+        <td class="num">$380.000</td>
+        <td class="num">$1.100.000</td>
+        <td class="num">$2.950.000</td>
+      </tr>
+      <tr>
+        <td><strong>Servicios IA (diseño, automatización)</strong></td>
+        <td>$90.000-$350.000/proyecto</td>
+        <td class="num">$0</td>
+        <td class="num">$500.000</td>
+        <td class="num">$2.200.000</td>
+      </tr>
+      <tr>
+        <td><strong>Asesorías a emprendedores</strong></td>
+        <td>$60.000/sesión · pack 4 = $180.000</td>
+        <td class="num">$0</td>
+        <td class="num">$180.000</td>
+        <td class="num">$740.000</td>
+      </tr>
+      <tr>
+        <td><strong>Torneos de fútbol (inscripciones)</strong></td>
+        <td>$35.000/equipo · 8-20 equipos</td>
+        <td class="num">$0</td>
+        <td class="num">$290.000</td>
+        <td class="num">$730.000</td>
+      </tr>
+      <tr>
+        <td><strong>Patrocinio / publicidad local</strong></td>
+        <td>Negocio local paga por visibilidad</td>
+        <td class="num">$0</td>
+        <td class="num">$120.000</td>
+        <td class="num">$490.000</td>
+      </tr>
+      <tr>
+        <td><strong>Donaciones / convocatorias</strong></td>
+        <td>Mincultura, Alcaldía, cooperación</td>
+        <td class="num">$600.000</td>
+        <td class="num">$600.000</td>
+        <td class="num">$1.200.000</td>
+      </tr>
+      <tr class="total-row">
+        <td><strong>TOTAL INGRESOS</strong></td>
+        <td></td>
+        <td class="num"><strong>$1.230.000</strong></td>
+        <td class="num"><strong>$3.540.000</strong></td>
+        <td class="num"><strong>$10.160.000</strong></td>
+      </tr>
+    </table>
+
+    <div class="highlight">
+      <h3>📈 Viabilidad financiera: Cerrando el Valle de la Muerte</h3>
+      <p>Con el nuevo esquema flexible de salarios, el déficit del mes 3-4 bajó drásticamente de $5.4M a solo <strong
+          style="color:var(--amarillo)">~$3.3M/mes</strong>. Este hueco ahora se puede cubrir fácilmente con un capital
+        semilla pequeño o vendiendo talleres por adelantado. En el mes 6, con ingresos de $10.1M y costos de ~$10.5M, el
+        módulo entra en equilibrio real operando a tope y devolviendo el "retroactivo" al administrador.</p>
+    </div>
+
+    <h2 style="margin-top:1.5rem;">Distribución de Excedentes (Mes 6+)</h2>
+    <p style="margin-bottom:1rem;">Al ser entidad sin ánimo de lucro, la utilidad no va a socios, se reinvierte
+      éticamente:</p>
+    <div class="card">
+      <table>
+        <tr>
+          <th>Destino</th>
+          <th>%</th>
+          <th>Descripción (Enfoque Ético)</th>
+        </tr>
+        <tr>
+          <td>Fondo Expansión (Nuevo módulo)</td>
+          <td class="num">25%</td>
+          <td>Ahorro para abrir el siguiente parque de forma sostenible.</td>
+        </tr>
+        <tr>
+          <td>Fondo Bienestar Tutores</td>
+          <td class="num">20%</td>
+          <td>Para pagarles cursos (Platzi/Domestika) o subsidiarles internet en casa.</td>
+        </tr>
+        <tr>
+          <td>Fondo Operativo Reserva</td>
+          <td class="num">20%</td>
+          <td>3 meses de costos fijos en caja (para proteger empleos si hay crisis).</td>
+        </tr>
+        <tr>
+          <td>Subsidio Cruzado (Becas)</td>
+          <td class="num">20%</td>
+          <td>Financia tutorías y kits 100% gratis para niños sin recursos del barrio.</td>
+        </tr>
+        <tr>
+          <td>Mejora Infraestructura Módulo</td>
+          <td class="num">15%</td>
+          <td>Nuevos equipos y materiales (Los jóvenes deciden en qué gastarlo).</td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+     SECCIÓN 5: VIABILIDAD
+══════════════════════════════════════════════════ -->
+  <section id="viabilidad">
+    <div class="section-label">Análisis estratégico</div>
+    <h1>Viabilidad &<br><span style="color:var(--rojo)">Mejoras</span></h1>
+
+    <div class="grid-3" style="margin-bottom:2rem;">
+      <div class="metric">
+        <div class="metric-value" style="color:var(--naranja)">6/10</div>
+        <div class="metric-label">Viabilidad modelo original</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value" style="color:var(--verde)">9/10</div>
+        <div class="metric-label">Con mejoras aplicadas</div>
+      </div>
+      <div class="metric">
+        <div class="metric-value" style="color:var(--azul)">Mes 5-7</div>
+        <div class="metric-label">Equilibrio proyectado</div>
+      </div>
+    </div>
+
+    <h2>Lo que está bien — no cambiar</h2>
+    <div class="grid-2">
+      <div class="highlight">
+        <h3>✅ Modelo circular de talento</h3>
+        <p>Estudiante → tutor → ingreso → ciclo. El administrador coordina y potencia este ciclo. Es el motor más
+          sostenible posible.</p>
+      </div>
+      <div class="highlight">
+        <h3>✅ IA como línea de ingresos</h3>
+        <p>Diferencial real. Ningún modelo de parque comunitario en Colombia lo está haciendo. Margen alto, bajo costo
+          de producción.</p>
+      </div>
+      <div class="highlight">
+        <h3>✅ Catálogo de insumos estructurado</h3>
+        <p>Tener precios claros, kits armados y rotación predecible según calendario escolar convierte los insumos en la
+          línea más predecible del modelo.</p>
+      </div>
+      <div class="highlight">
+        <h3>✅ Administrador con salario digno</h3>
+        <p>Pagar bien al administrador (2-2.5 SMMLV) garantiza compromiso, permanencia y calidad. Es el costo más
+          importante y el más justificado.</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:1.5rem;">Mejoras — implementar de inmediato</h2>
+
+    <div class="card card-warn" style="margin-bottom:1rem;">
+      <div class="badge badge-naranja">Mejora 1 · CRÍTICA</div>
+      <h3>Fases de activación — no todo al tiempo</h3>
+      <table>
+        <tr>
+          <th>Fase</th>
+          <th>Meses</th>
+          <th>Líneas activas</th>
+        </tr>
+        <tr>
+          <td>Fase 0 — Prueba</td>
+          <td>1-2</td>
+          <td>Insumos + Tutorías + WiFi parque (<strong style="color:var(--amarillo)">Admin Ad Honorem / Capital
+              Sudor</strong>)</td>
+        </tr>
+        <tr>
+          <td>Fase 1 — Arranque</td>
+          <td>3-4</td>
+          <td>+ Servicios IA + Cine parque + <strong style="color:var(--amarillo)">Admin 1 SMMLV + Bono
+              Cumplimiento</strong></td>
+        </tr>
+        <tr>
+          <td>Fase 2 — Crecimiento</td>
+          <td>5-6</td>
+          <td>+ Torneos + Asesorías + <strong style="color:var(--verde)">Admin 2 SMMLV + Bono Retroactivo</strong></td>
+        </tr>
+        <tr>
+          <td>Fase 3 — Consolidación</td>
+          <td>7+</td>
+          <td>Todas las líneas + preparar módulo 2</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="card card-warn" style="margin-bottom:1rem;">
+      <div class="badge badge-naranja">Mejora 2 · ALTA</div>
+      <h3>Legalizar desde el mes 0</h3>
+      <p>Constituir como Asociación ante Cámara de Comercio (~$380.000 en 2026). Abre: convocatorias de Mincultura,
+        Alcaldía, cooperación internacional; donaciones con beneficio tributario (Art. 125 ET); credibilidad ante
+        colegios. Sin personería, el modelo es informal y frágil.</p>
+    </div>
+
+    <div class="card card-warn" style="margin-bottom:1rem;">
+      <div class="badge badge-naranja">Mejora 3 · ALTA</div>
+      <h3>Alianza con 1 colegio antes de abrir</h3>
+      <p>Visitar el rector del colegio más cercano. Proponer "convenio de remisión": el colegio informa a padres, el
+        módulo entrega servicio. Sin costo para el colegio, flujo garantizado de estudiantes. En 2026, con el aumento
+        del 23% en el SMMLV, muchos padres buscan opciones más baratas que las papelerías — el módulo llena ese espacio.
+      </p>
+    </div>
+
+    <div class="card card-info" style="margin-bottom:1rem;">
+      <div class="badge badge-azul">Mejora 4 · MEDIA</div>
+      <h3>Catálogo IA con precios fijos 2026</h3>
+      <p>5 servicios entregables por jóvenes: (1) Logo básico $95.000 · (2) Pack 10 posts $145.000 · (3) Automatización
+        WhatsApp $180.000 · (4) Presentación comercial $120.000 · (5) Análisis datos $240.000. El alza del SMMLV hace
+        que los pequeños negocios busquen opciones económicas — el módulo es esa opción.</p>
+    </div>
+
+    <div class="warn-box">
+      <h3>⚠ Alerta SMMLV 2026: Precios justos sin excluir</h3>
+      <p>El incremento del 23% en el salario mínimo presiona la economía. Ajustar los precios de tutorías un 10-15% es
+        necesario, pero los niños sin capacidad de pago NUNCA son rechazados; se cubren con el <strong>Fondo de Subsidio
+          Cruzado</strong> alimentado por la venta de Servicios IA a empresas.</p>
+    </div>
+
+    <h2 style="margin-top:2.5rem;">Política de Cuidado Social (Cero Explotación)</h2>
+    <p style="margin-bottom:1.5rem;">Un proyecto social pierde sentido si quema a su equipo. El modelo está blindado
+      contra abusos:</p>
+
+    <div class="grid-2">
+      <div class="card card-accent">
+        <div class="badge badge-verde">Protección al Tutor</div>
+        <h3 style="margin-bottom:0.5rem">Límite de 12 horas semanales</h3>
+        <p style="font-size:0.85rem">Los tutores jóvenes <strong>tienen prohibido</strong> trabajar más de 12h/semana.
+          Su prioridad es la universidad/colegio. El módulo es un apoyo, no un trabajo de tiempo completo disfrazado de
+          freelance (Gig Economy).</p>
+      </div>
+      <div class="card card-info">
+        <div class="badge badge-azul">Salud Mental</div>
+        <h3 style="margin-bottom:0.5rem">Cierre innegociable de 1 día</h3>
+        <p style="font-size:0.85rem">El administrador debe tener 1 día a la semana de desconexión total. Si el
+          administrador se "quema" (Burnout), el nodo colapsa. Su descanso es una obligación operativa, no un lujo.</p>
+      </div>
+      <div class="card" style="background:var(--gris2); border:1px solid var(--gris);">
+        <div class="badge badge-amarillo">Gobernanza</div>
+        <h3 style="margin-bottom:0.5rem">Comité de Inversión Juvenil</h3>
+        <p style="font-size:0.85rem">El 15% de los excedentes destinados a infraestructura no los decide el
+          administrador. Los jóvenes tutores votan cada mes qué comprar (ej. ¿Compramos otra Tablet o más marcadores?).
+          Genera apropiación y liderazgo real.</p>
+      </div>
+      <div class="card" style="background:var(--gris2); border:1px solid var(--gris);">
+        <div class="badge badge-naranja">Bienestar</div>
+        <h3 style="margin-bottom:0.5rem">No solo es dinero</h3>
+        <p style="font-size:0.85rem">Parte de la compensación de los tutores (Fondo de Bienestar) va a pagarles cursos
+          premium (Platzi, Coursera) o ayudarles con el pago del internet de sus casas para que sigan formándose en IA y
+          tecnología.</p>
+      </div>
+    </div>
+
+    <h2 style="margin-top:2.5rem;">Mitigación de Riesgos Operativos (Escenario Parque)</h2>
+    <p style="margin-bottom:1.5rem;">Operar tecnología en un espacio público abierto es un reto gigante. El proyecto
+      resuelve las 3 amenazas principales (Robo, Clima, Mal uso) con este protocolo:</p>
+
+    <div class="grid-3">
+      <div class="card card-danger">
+        <div class="badge badge-rojo">Riesgo: Robo de Equipos</div>
+        <h3 style="margin-bottom:0.5rem">Solución: "Módulo Carrito" y Escudo Social</h3>
+
+        <div
+          style="position:relative; margin-bottom:1rem; border:1px solid rgba(255,0,255,0.3); border-radius:8px; overflow:hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.5); cursor:zoom-in;"
+          onclick="document.getElementById('image-modal').style.display='flex'; document.getElementById('modal-img').src='carrito_maker.png';">
+          <!-- Etiqueta técnica superior -->
+          <div
+            style="position:absolute; top:0; left:0; right:0; background:rgba(0,0,0,0.8); border-bottom:1px solid var(--magenta); padding:0.2rem 0.5rem; font-family:var(--font-mono); font-size:0.6rem; color:var(--magenta); text-transform:uppercase; z-index:5;">
+            PROTOTIPO DE INGENIERÍA v1.0 — MÓDULO MULTIPLICA
+          </div>
+
+          <img src="carrito_maker.png" alt="Prototipo Carrito Maker" style="width:100%; display:block;">
+
+          <!-- Rejilla estilo plano (Blueprint grid) -->
+          <div
+            style="position:absolute; top:0; left:0; right:0; bottom:0; background: linear-gradient(rgba(57, 255, 20, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(57, 255, 20, 0.1) 1px, transparent 1px); background-size: 25px 25px; pointer-events: none; z-index:2;">
+          </div>
+
+          <!-- Punteros técnicos (Callouts) -->
+          <div
+            style="position:absolute; top:25%; left:5%; background:rgba(0,0,0,0.7); border:1px solid var(--sun); padding:0.2rem 0.4rem; font-family:var(--font-mono); font-size:0.55rem; color:var(--sun); border-radius:3px; z-index:3; backdrop-filter:blur(2px); pointer-events:none;">
+            [1] Montura Monitores VESA
+          </div>
+          <div
+            style="position:absolute; top:55%; right:5%; background:rgba(0,0,0,0.7); border:1px solid var(--sun); padding:0.2rem 0.4rem; font-family:var(--font-mono); font-size:0.55rem; color:var(--sun); border-radius:3px; z-index:3; backdrop-filter:blur(2px); pointer-events:none;">
+            [2] Mesa Plegable Teclados
+          </div>
+          <div
+            style="position:absolute; bottom:30%; left:8%; background:rgba(0,0,0,0.7); border:1px solid var(--sun); padding:0.2rem 0.4rem; font-family:var(--font-mono); font-size:0.55rem; color:var(--sun); border-radius:3px; z-index:3; backdrop-filter:blur(2px); pointer-events:none;">
+            [3] Chasis Antivandalismo
+          </div>
+          <div
+            style="position:absolute; bottom:8%; right:15%; background:rgba(0,0,0,0.7); border:1px solid var(--sun); padding:0.2rem 0.4rem; font-family:var(--font-mono); font-size:0.55rem; color:var(--sun); border-radius:3px; z-index:3; backdrop-filter:blur(2px); pointer-events:none;">
+            [4] Eje Todoterreno 8"
+          </div>
+        </div>
+
+        <p style="font-size:0.85rem"><strong>Nunca dejamos infraestructura fija.</strong> Las pantallas y periféricos
+          van anclados a un "carrito rodante" asegurado. El administrador lo saca al parque en la mañana y lo guarda en
+          la Junta de Acción Comunal o casa de un vecino aliado en la noche. Además, cuando las madres y líderes del
+          barrio ven que el proyecto educa a sus propios hijos, ellos mismos se convierten en la seguridad intocable del
+          proyecto (<em>Escudo Comunitario</em>).</p>
+      </div>
+
+      <div class="card card-warn">
+        <div class="badge badge-naranja">Riesgo: Clima (Lluvia/Sol)</div>
+        <h3 style="margin-bottom:0.5rem">Solución: Carpa Plegable y "Plan B"</h3>
+        <img src="carpa_clima.png" alt="Prototipo Carpa"
+          style="width:100%; border-radius:8px; margin-bottom:1rem; border:1px solid rgba(0,240,255,0.3); cursor:zoom-in; box-shadow: 0 5px 15px rgba(0,0,0,0.5);"
+          onclick="document.getElementById('image-modal').style.display='flex'; document.getElementById('modal-img').src=this.src;">
+        <p style="font-size:0.85rem"><strong>Despliegue táctico:</strong> El módulo incluye una "Carpa Araña"
+          impermeable de armado rápido (3x3m) para proteger del sol y la llovizna. Adicionalmente, el parque elegido
+          siempre debe tener una "Zona de Refugio" a menos de 20 metros (un coliseo techado, la caseta comunal, o el
+          alero de una tienda aliada) para ejecutar un <em>Protocolo de Evacuación</em> en menos de 2 minutos si hay
+          tormenta fuerte.</p>
+      </div>
+
+      <div class="card card-info">
+        <div class="badge badge-azul">Riesgo: Desinterés o Mal Uso</div>
+        <h3 style="margin-bottom:0.5rem">Solución: "Kiosk Mode" y Moneda de Tiempo</h3>
+        <img src="kiosk_mode.png" alt="Kiosk Mode UI"
+          style="width:100%; border-radius:8px; margin-bottom:1rem; border:1px solid rgba(57,255,20,0.3); cursor:zoom-in; box-shadow: 0 5px 15px rgba(0,0,0,0.5);"
+          onclick="document.getElementById('image-modal').style.display='flex'; document.getElementById('modal-img').src=this.src;">
+        <p style="font-size:0.85rem"><strong>Cero distracciones:</strong> Los computadores están bloqueados (Kiosk Mode)
+          para abrir únicamente plataformas de IA y estudio; si buscan juegos o redes de ocio, no funcionan. Para
+          garantizar interés real, el tiempo en pantalla <em>se gana, no se regala</em>. Un joven adquiere 30 minutos de
+          uso de computador a cambio de ayudarle 15 minutos a un niño más pequeño a leer (sistema de <em>Banco de Tiempo
+            Comunitario</em>).</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+     SECCIÓN 6: KPIs
+══════════════════════════════════════════════════ -->
+  <section id="kpis">
+    <div class="section-label">Medición de impacto · 2026</div>
+    <h1>KPIs<br><span style="color:var(--azul)">Sociales</span></h1>
+
+    <p style="margin-bottom:2rem;max-width:600px;">Los KPIs miden el impacto real y construyen la narrativa para
+      donantes, gobierno y medios. Este panel clasifica los indicadores por nivel de criticidad para enfocar la gestión
+      diaria del administrador.</p>
+
+    <h2>KPIs de Impacto Social</h2>
+    <table>
+      <tr>
+        <th>Importancia</th>
+        <th>Indicador</th>
+        <th>Cómo medirlo</th>
+        <th>Meta mes 3</th>
+        <th>Meta mes 12</th>
+      </tr>
+      <tr>
+        <td><span class="badge badge-rojo">Crítico</span></td>
+        <td>Jóvenes activos en el módulo</td>
+        <td>Registro asistencia semanal</td>
+        <td class="num">25</td>
+        <td class="num" style="color:var(--sun);">120</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-naranja">Alta</span></td>
+        <td>Jóvenes convertidos en tutores</td>
+        <td>Seguimiento individual</td>
+        <td class="num">3</td>
+        <td class="num" style="color:var(--sun);">18</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-azul">Media</span></td>
+        <td>Horas de tutoría entregadas</td>
+        <td>Registro de sesiones</td>
+        <td class="num">40h</td>
+        <td class="num" style="color:var(--sun);">200h</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-rojo">Crítico</span></td>
+        <td>Ingresos generados por jóvenes</td>
+        <td>Pagos registrados en libro</td>
+        <td class="num">$350.000</td>
+        <td class="num" style="color:var(--sun);">$4.200.000</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-azul">Media</span></td>
+        <td>Emprendimientos asesorados</td>
+        <td>Formulario de registro</td>
+        <td class="num">2</td>
+        <td class="num" style="color:var(--sun);">24</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-naranja">Alta</span></td>
+        <td>Servicios IA vendidos</td>
+        <td>Registro de proyectos</td>
+        <td class="num">0</td>
+        <td class="num" style="color:var(--sun);">36</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-verde">Baja</span></td>
+        <td>Asistentes a cine en parque</td>
+        <td>Conteo por evento</td>
+        <td class="num">80</td>
+        <td class="num" style="color:var(--sun);">300/mes</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-verde">Baja</span></td>
+        <td>Equipos en torneos de fútbol</td>
+        <td>Registro de inscripción</td>
+        <td class="num">0</td>
+        <td class="num" style="color:var(--sun);">16</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-azul">Media</span></td>
+        <td>Insumos vendidos (transacc.)</td>
+        <td>Libro de caja</td>
+        <td class="num">40</td>
+        <td class="num" style="color:var(--sun);">250</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-rojo">Crítico</span></td>
+        <td>Tasa de retención mensual</td>
+        <td>% que regresa mes siguiente</td>
+        <td class="num">60%</td>
+        <td class="num" style="color:var(--sun);">75%</td>
+      </tr>
+    </table>
+
+    <h2>KPIs de Sostenibilidad Financiera 2026</h2>
+    <table>
+      <tr>
+        <th>Importancia</th>
+        <th>Indicador</th>
+        <th>Fórmula</th>
+        <th>Meta mes 6</th>
+      </tr>
+      <tr>
+        <td><span class="badge badge-rojo">Crítico</span></td>
+        <td>Ratio de autosuficiencia</td>
+        <td>Ingresos propios / Costos totales</td>
+        <td class="num" style="color:var(--sun);">> 80%</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-naranja">Alta</span></td>
+        <td>Costo por joven beneficiado</td>
+        <td>Costo total / jóvenes activos</td>
+        <td class="num" style="color:var(--sun);">
+          < $75.000</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-naranja">Alta</span></td>
+        <td>Ingreso prom. por tutor joven</td>
+        <td>Total pagado / nro tutores</td>
+        <td class="num" style="color:var(--sun);">> $250.000</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-azul">Media</span></td>
+        <td>Margen bruto insumos</td>
+        <td>(Venta - costo) / Venta</td>
+        <td class="num" style="color:var(--sun);">> 45%</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-rojo">Crítico</span></td>
+        <td>Meses de reserva en caja</td>
+        <td>Reserva / costo mensual</td>
+        <td class="num" style="color:var(--sun);">> 1.5</td>
+      </tr>
+      <tr>
+        <td><span class="badge badge-rojo">Crítico</span></td>
+        <td>Salario admin cubierto 100%</td>
+        <td>Meses con salario completo</td>
+        <td class="num" style="color:var(--sun);">100%</td>
+      </tr>
+    </table>
+
+    <div class="highlight">
+      <h3>📊 El número que gana cualquier conversación con donantes</h3>
+      <p>A mes 12 con 120 jóvenes activos y costo total de ~$8.9M: costo por joven = <strong
+          style="color:var(--sun);text-shadow:var(--glow-verde);">$74.000/mes</strong>. En 2026, con la inflación,
+        atender a un menor le cuesta al Estado entre $4M-$10M/año. El módulo lo hace por <strong
+          style="color:var(--sun);text-shadow:var(--glow-verde);">$888.000/año</strong>. Es <strong
+          style="color:var(--sun);text-shadow:var(--glow-verde);">5 a 11 veces más eficiente</strong>.</p>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+     SECCIÓN 7: RUTA SIN CAPITAL
+══════════════════════════════════════════════════ -->
+  <section id="ruta">
+    <div class="section-label">De cero a red nacional · 2026</div>
+    <h1>Ruta sin<br><span style="color:var(--verde)">Capital</span></h1>
+
+    <div class="warn-box">
+      <h3>Premisa honesta</h3>
+      <p>Arrancar sin capital no significa sin recursos. En 2026, con el SMMLV al más alto nivel histórico, hay más
+        dinero RSE disponible, más convocatorias activas y más micro-emprendedores que necesitan servicios baratos. El
+        momento es favorable.</p>
+    </div>
+
+    <div class="timeline" style="margin-top:2rem;">
+      <div class="tl-item">
+        <div class="tl-phase">Semanas 1-2 · Pre-arranque</div>
+        <h3>El mínimo antes de anunciar</h3>
+        <ul class="styled">
+          <li>Constituir la Asociación ante Cámara de Comercio con 2-3 asociados fundadores (~$380.000)</li>
+          <li>Crear perfil Instagram + TikTok. Primeros 3 posts: el por qué del proyecto, historia real</li>
+          <li>Pedir proyector + parlante en comodato. Comprometerse a devolver en 30 días</li>
+          <li>Comprar kit de insumos mínimo ($500.000) con dinero propio o préstamo familiar</li>
+          <li>Hablar con 5 padres del barrio — escuchar qué necesitan, no vender todavía</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-phase">Semanas 3-4 · Primera actividad</div>
+        <h3>Cine en el parque como lanzamiento</h3>
+        <ul class="styled">
+          <li>Organizar noche de cine gratis. Difundir por WhatsApp y flyers impresos en negro</li>
+          <li>Stand con insumos expuestos + QR a Instagram durante el evento</li>
+          <li>Recoger 20+ números de WhatsApp interesados en tutorías</li>
+          <li>Documentar todo: fotos, videos, testimonios — el contenido es el primer activo</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-phase">Mes 1 · Primeras ventas</div>
+        <h3>Insumos + primeras tutorías</h3>
+        <ul class="styled">
+          <li>Anunciar: "¿Tienes tarea de manualidades? Tenemos los materiales y te ayudamos"</li>
+          <li>Primera tutoría grupal: 4 estudiantes x $15.000 = $60.000 brutos por sesión de 2h</li>
+          <li>Visitar rector del colegio más cercano. Presentación de 1 página, pedir 5 minutos</li>
+          <li>Postular a primera convocatoria: cultura.gov.co y Alcaldía de Medellín</li>
+          <li>Meta mes 1: $800.000–$1.200.000 (cubre WiFi + insumos + algo más)</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-phase">Mes 2-3 · Primeros tutores + administrador</div>
+        <h3>Talento interno y primer salario</h3>
+        <ul class="styled">
+          <li>Identificar 1-2 estudiantes con habilidades fuertes → ofrecerles ser tutores junior (40% de comisión)</li>
+          <li>Entrenar en herramientas IA básicas: Canva IA, ChatGPT, generadores de imagen</li>
+          <li>Primer servicio IA vendido: logo o pack de posts para negocio local $90.000–$120.000</li>
+          <li><strong style="color:var(--amarillo)">Desde mes 3:</strong> el administrador empieza a cobrar 1 SMMLV +
+            bonos para no ahorcar la caja.</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-phase">Mes 4-6 · Punto de equilibrio</div>
+        <h3>Módulo estable con administrador pagado</h3>
+        <ul class="styled">
+          <li>Alcanzar ingresos propios > $9.000.000/mes</li>
+          <li>Formalizar convenio educativo con colegio (carta de respaldo mutuo)</li>
+          <li>Crear el "Manual de Módulo" — cómo replicar en otro parque</li>
+          <li>Administrador sube a 2 SMMLV + pago retroactivo de deuda inicial.</li>
+          <li>Identificar el aliado del segundo módulo en otro barrio</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-phase">Mes 7-12 · Red de 3 módulos</div>
+        <h3>Escalar con modelo probado</h3>
+        <ul class="styled">
+          <li>Usar el manual + métricas del módulo 1 para abrir módulos 2 y 3</li>
+          <li>Postular a convocatorias nacionales (Minciencias, Mincultura) con datos reales</li>
+          <li>Crear "Red de Módulos" con identidad nacional</li>
+          <li>Explorar alianza con SENA, Computadores para Educar y universidades</li>
+        </ul>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-phase">Año 2-3 · Red nacional</div>
+        <h3>Del barrio al país</h3>
+        <ul class="styled">
+          <li>Modelo de "franquicia social": cualquier líder puede abrir un módulo bajo la marca</li>
+          <li>Plataforma digital conectando módulos, tutores y catálogo de insumos</li>
+          <li>Contratos de impacto social con gobernaciones y alcaldías</li>
+          <li>Postular a Ashoka, GIZ, USAID, Skoll Foundation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+     SECCIÓN 8: DONANTES
+══════════════════════════════════════════════════ -->
+  <section id="donantes">
+    <div class="section-label">Fuentes de financiación · 2026</div>
+    <h1>Ruta de<br><span style="color:var(--amarillo)">Donantes</span></h1>
+
+    <p style="margin-bottom:2rem;max-width:600px;">En 2026, el aumento del 23% en el SMMLV amplía los presupuestos RSE y
+      de convocatorias. Es un buen año para buscar recursos. Tres frentes: público (legitimidad), privado (velocidad),
+      internacional (escala).</p>
+
+    <h2>Fuentes Públicas — Colombia 2026</h2>
+    <div class="card card-accent">
+      <table>
+        <tr>
+          <th>Entidad</th>
+          <th>Programa</th>
+          <th>Monto aprox.</th>
+          <th>Cuándo</th>
+        </tr>
+        <tr>
+          <td>Alcaldía de Medellín</td>
+          <td>Cultura Viva Comunitaria / FDL</td>
+          <td class="num">$5-30M</td>
+          <td>Mes 2</td>
+        </tr>
+        <tr>
+          <td>Mincultura</td>
+          <td>Convocatorias de Estímulos</td>
+          <td class="num">$10-50M</td>
+          <td>Mes 3</td>
+        </tr>
+        <tr>
+          <td>SENA</td>
+          <td>Convenios formación / Fondo Emprender</td>
+          <td class="num">Capacitación gratis</td>
+          <td>Mes 1</td>
+        </tr>
+        <tr>
+          <td>Computadores para Educar</td>
+          <td>Dotación tecnológica</td>
+          <td class="num">Equipos</td>
+          <td>Mes 2</td>
+        </tr>
+        <tr>
+          <td>Minciencias (Colciencias)</td>
+          <td>Proyectos innovación social</td>
+          <td class="num">$50-200M</td>
+          <td>Mes 6</td>
+        </tr>
+        <tr>
+          <td>Secretaría Educación Medellín</td>
+          <td>Jóvenes en Acción / alianzas</td>
+          <td class="num">Variable</td>
+          <td>Mes 3</td>
+        </tr>
+      </table>
+    </div>
+
+    <h2 style="margin-top:1.5rem;">Empresas Privadas — RSE 2026</h2>
+    <div class="card card-info">
+      <p style="margin-bottom:1rem;">Con el SMMLV 2026 más alto, los presupuestos RSE de grandes empresas también
+        crecen. Las donaciones a entidades sin ánimo de lucro tienen beneficio tributario (Art. 125 ET). Argumentar
+        siempre con KPIs.</p>
+      <table>
+        <tr>
+          <th>Empresa</th>
+          <th>Qué ofrecer</th>
+          <th>Potencial</th>
+        </tr>
+        <tr>
+          <td>EPM — Empresas Públicas Medellín</td>
+          <td>Datos de impacto, marca en actividades</td>
+          <td><span class="badge badge-verde">Alto</span></td>
+        </tr>
+        <tr>
+          <td>Bancolombia / Fundación Bancolombia</td>
+          <td>Reportes de emprendedores, storytelling</td>
+          <td><span class="badge badge-verde">Alto</span></td>
+        </tr>
+        <tr>
+          <td>Comfama / Comfenalco</td>
+          <td>Convenio servicios culturales y educativos</td>
+          <td><span class="badge badge-verde">Alto</span></td>
+        </tr>
+        <tr>
+          <td>Empresas tech locales (startups)</td>
+          <td>Licencias software, mentoría técnica</td>
+          <td><span class="badge badge-azul">Medio</span></td>
+        </tr>
+        <tr>
+          <td>Panafargo / Suescun (proveedores insumos)</td>
+          <td>Descuentos mayoristas, crédito a 30 días</td>
+          <td><span class="badge badge-azul">Alianza clave</span></td>
+        </tr>
+        <tr>
+          <td>Medios de comunicación locales</td>
+          <td>Cobertura gratuita a cambio de historias de impacto</td>
+          <td><span class="badge badge-amarillo">Alianza</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <h2 style="margin-top:1.5rem;">Cooperación Internacional</h2>
+    <div class="card card-warn">
+      <table>
+        <tr>
+          <th>Organización</th>
+          <th>Enfoque</th>
+          <th>Sitio</th>
+        </tr>
+        <tr>
+          <td>Ashoka Colombia</td>
+          <td>Emprendimiento social innovador</td>
+          <td><span class="badge badge-verde">ashoka.org</span></td>
+        </tr>
+        <tr>
+          <td>USAID Colombia</td>
+          <td>Juventud, educación, paz</td>
+          <td><span class="badge badge-azul">usaid.gov</span></td>
+        </tr>
+        <tr>
+          <td>Fundación Avina</td>
+          <td>Desarrollo sostenible América Latina</td>
+          <td><span class="badge badge-azul">avina.net</span></td>
+        </tr>
+        <tr>
+          <td>Skoll Foundation</td>
+          <td>Emprendedores sociales de impacto sistémico</td>
+          <td><span class="badge badge-amarillo">skoll.org</span></td>
+        </tr>
+        <tr>
+          <td>GIZ — Cooperación Alemana</td>
+          <td>Proyectos paz y juventud Colombia</td>
+          <td><span class="badge badge-azul">giz.de</span></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+
+
+  <!-- ══════════════════════════════════════════════════
+     SECCIÓN 9: PITCH DECK
+══════════════════════════════════════════════════ -->
+  <section id="pitch">
+    <div class="section-label">Para inversores y donantes · Versión 2026</div>
+    <h1>Pitch<br><span style="color:var(--verde)">Deck</span></h1>
+
+    <p style="margin-bottom:2rem;max-width:600px;">8 diapositivas. Datos actualizados con SMMLV 2026 y catálogo de
+      insumos. Argumento central: somos la intervención social más eficiente por peso invertido en Colombia hoy.</p>
+
+    <div class="pitch-slide" data-num="01">
+      <div class="badge badge-rojo">Diapositiva 1 · El Problema</div>
+      <h2 style="margin-top:0.5rem;">Los jóvenes de barrio tienen talento.<br>El sistema no tiene dónde ponerlos.</h2>
+      <hr class="divider">
+      <div class="grid-3">
+        <div>
+          <div class="hero-stat"><span class="hero-stat-num">7M</span><span class="hero-stat-unit">jóvenes NINI en
+              Colombia</span></div>
+          <p style="font-size:0.75rem;">Ni estudian ni trabajan. No por capacidad, sino por falta de estructura.</p>
+        </div>
+        <div>
+          <div class="hero-stat"><span class="hero-stat-num">23%</span><span class="hero-stat-unit">subió el costo de
+              vida en 2026</span></div>
+          <p style="font-size:0.75rem;">El SMMLV histórico de $1.750.905 no alcanza para la canasta de $3.000.000.</p>
+        </div>
+        <div>
+          <div class="hero-stat"><span class="hero-stat-num">$0</span><span class="hero-stat-unit">acceso real a
+              herramientas digitales</span></div>
+          <p style="font-size:0.75rem;">La economía del conocimiento crece. Los barrios quedan afuera.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pitch-slide" data-num="02">
+      <div class="badge badge-verde">Diapositiva 2 · La Solución</div>
+      <h2 style="margin-top:0.5rem;">Módulos MULTIPLICA:<br>el parque como plataforma comunitaria autosostenible.</h2>
+      <hr class="divider">
+      <p style="margin-bottom:1rem;">Un nodo físico-digital en parques barriales. No es un CAI. No es caridad. Es un
+        <strong style="color:var(--verde)">ecosistema de aprendizaje, creación e ingresos que se paga solo.</strong></p>
+      <div class="tags">
+        <span class="tag">Tutorías escolares</span><span class="tag">Venta de insumos</span><span class="tag">Servicios
+          de IA</span><span class="tag">WiFi gratuito</span><span class="tag">Cine en parque</span><span
+          class="tag">Torneos deportivos</span><span class="tag">Asesoría emprendedores</span><span class="tag">Tutores
+          jóvenes pagados</span><span class="tag">Administrador con salario digno</span>
+      </div>
+    </div>
+
+    <div class="pitch-slide" data-num="03">
+      <div class="badge badge-azul">Diapositiva 3 · Cómo funciona</div>
+      <h2 style="margin-top:0.5rem;">El círculo virtuoso del talento barrial</h2>
+      <hr class="divider">
+      <div class="grid-2">
+        <div class="card" style="background:var(--gris2);border:none;">
+          <h3 style="color:var(--verde);">① Atracción</h3>
+          <p>WiFi + cine + torneos llevan a los jóvenes al parque sin fricción.</p>
+        </div>
+        <div class="card" style="background:var(--gris2);border:none;">
+          <h3 style="color:var(--amarillo);">② Enganche</h3>
+          <p>Tutorías + insumos para tareas crean el primer hábito de asistencia.</p>
+        </div>
+        <div class="card" style="background:var(--gris2);border:none;">
+          <h3 style="color:var(--azul);">③ Desarrollo</h3>
+          <p>Los más habilidosos aprenden IA, diseño, código. Producen servicios vendibles.</p>
+        </div>
+        <div class="card" style="background:var(--gris2);border:none;">
+          <h3 style="color:var(--naranja);">④ Ingresos propios</h3>
+          <p>Tutores jóvenes + administrador cobran. El módulo se autofinancia. El ciclo continúa.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pitch-slide" data-num="04">
+      <div class="badge badge-amarillo">Diapositiva 4 · Modelo Financiero 2026</div>
+      <h2 style="margin-top:0.5rem;">Se autofinancia. Donaciones<br>solo como combustible inicial.</h2>
+      <hr class="divider">
+      <div class="grid-2">
+        <table>
+          <tr>
+            <th>Fuente de ingreso</th>
+            <th>% mes 6</th>
+          </tr>
+          <tr>
+            <td>Tutorías + insumos</td>
+            <td class="num">48%</td>
+          </tr>
+          <tr>
+            <td>Servicios IA</td>
+            <td class="num">22%</td>
+          </tr>
+          <tr>
+            <td>Torneos + cine + patrocinio</td>
+            <td class="num">12%</td>
+          </tr>
+          <tr>
+            <td>Asesorías emprendedores</td>
+            <td class="num">7%</td>
+          </tr>
+          <tr>
+            <td>Donaciones / convocatorias</td>
+            <td class="num">12%</td>
+          </tr>
+        </table>
+        <table>
+          <tr>
+            <th>Costo clave 2026</th>
+            <th>Valor</th>
+          </tr>
+          <tr>
+            <td>SMMLV base</td>
+            <td class="num" style="color:var(--verde);">$1.750.905</td>
+          </tr>
+          <tr>
+            <td>Costo Fijo Mes 3 (1 SMMLV + Bono)</td>
+            <td class="num" style="color:var(--amarillo);">$5.629.175</td>
+          </tr>
+          <tr>
+            <td>Total operación/mes 3</td>
+            <td class="num">$6.929.175</td>
+          </tr>
+          <tr>
+            <td>Ingresos proyectados mes 6</td>
+            <td class="num" style="color:var(--verde);">$10.160.000</td>
+          </tr>
+        </table>
+      </div>
+      <div class="highlight" style="margin-top:1rem;">
+        <h3>Equilibrio dinámico en mes 6</h3>
+        <p>El déficit de arranque bajó a $3.3M/mes, logrando que sea financiable sin grandes inversores. Al mes 6 el
+          módulo sostiene al administrador pagando su deuda.</p>
+      </div>
+    </div>
+
+    <div class="pitch-slide" data-num="05">
+      <div class="badge badge-verde">Diapositiva 5 · Impacto Medible</div>
+      <h2 style="margin-top:0.5rem;">No prometemos cambiar el mundo.<br>Medimos que lo estamos haciendo.</h2>
+      <hr class="divider">
+      <div class="grid-3">
+        <div class="metric">
+          <div class="metric-value" style="color:var(--verde)">120</div>
+          <div class="metric-label">Jóvenes activos año 1</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value" style="color:var(--amarillo)">18</div>
+          <div class="metric-label">Tutores jóvenes pagados</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value" style="color:var(--azul)">24</div>
+          <div class="metric-label">Emprendimientos asesorados</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value" style="color:var(--naranja)">200h</div>
+          <div class="metric-label">Tutorías/mes entregadas</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value" style="color:var(--rojo)">3.600</div>
+          <div class="metric-label">Asistentes cine/año</div>
+        </div>
+        <div class="metric">
+          <div class="metric-value" style="color:var(--verde)">75%</div>
+          <div class="metric-label">Tasa de retención</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pitch-slide" data-num="06">
+      <div class="badge badge-naranja">Diapositiva 6 · Escalabilidad</div>
+      <h2 style="margin-top:0.5rem;">Un barrio hoy.<br>Una red nacional en 3 años.</h2>
+      <hr class="divider">
+      <div class="grid-2">
+        <div>
+          <div class="tl-phase">Año 1</div>
+          <p style="margin-bottom:1rem;">1 módulo consolidado. Manual operativo. Catálogo de insumos estandarizado.
+            Admin con salario completo.</p>
+          <div class="tl-phase">Año 2</div>
+          <p style="margin-bottom:1rem;">3-5 módulos en Medellín. Cada uno con su administrador formado en el módulo 1.
+          </p>
+          <div class="tl-phase">Año 3</div>
+          <p>10-20 módulos en 3-5 ciudades. Plataforma digital. Compra conjunta de insumos.</p>
+        </div>
+        <div class="card" style="background:var(--gris2);border:none;">
+          <h3 style="color:var(--verde);margin-bottom:1rem;">Por qué escala tan bien</h3>
+          <ul class="styled">
+            <li>El parque ya existe — no hay infraestructura que construir</li>
+            <li>El manual es el primer módulo</li>
+            <li>El catálogo de insumos se comparte entre todos los módulos (volumen = precio menor)</li>
+            <li>Los tutores jóvenes del módulo 1 son los administradores del módulo 2</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="pitch-slide" data-num="07">
+      <div class="badge badge-azul">Diapositiva 7 · Propuesta de Valor</div>
+      <h2 style="margin-top:0.5rem;">¿Qué recibe quien apoya<br>a MULTIPLICA?</h2>
+      <hr class="divider">
+      <div class="grid-2">
+        <div>
+          <h3 style="color:var(--verde);margin-bottom:0.8rem;">Para donantes / fundaciones</h3>
+          <ul class="styled">
+            <li>Impacto social medible con KPIs mensuales en tiempo real</li>
+            <li>Visibilidad en comunidad y medios locales</li>
+            <li>Historia de transformación con datos reales (storytelling auténtico)</li>
+            <li>Modelo replicable que multiplica su inversión</li>
+            <li>Beneficio tributario Art. 125 ET — donaciones deducibles</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="color:var(--azul);margin-bottom:0.8rem;">Para inversores de impacto</h3>
+          <ul class="styled">
+            <li>Retorno social medible + retorno reputacional</li>
+            <li>Modelo autosostenible y escalable con datos reales</li>
+            <li>Acceso a red de jóvenes talentosos en IA y tecnología</li>
+            <li>Co-diseño del modelo de expansión</li>
+            <li>Participación en junta consultiva de la red</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="pitch-slide" data-num="08" style="border-color:rgba(45,219,129,0.3);">
+      <div class="badge badge-verde">Diapositiva 8 · Llamado a la Acción</div>
+      <h2 style="margin-top:0.5rem;">Lo que necesitamos<br>para arrancar hoy.</h2>
+      <hr class="divider">
+      <div class="grid-3">
+        <div class="card" style="background:rgba(45,219,129,0.06);border-color:rgba(45,219,129,0.2);">
+          <h3 style="color:var(--verde);">$4.380.000</h3>
+          <p>Dotación mínima 2026 (proyector, WiFi, insumos, uniformes de impacto, etc.). <strong>Un solo donante o RSE
+              puede arrancar el nodo.</strong></p>
+        </div>
+        <div class="card" style="background:rgba(58,134,255,0.06);border-color:rgba(58,134,255,0.2);">
+          <h3 style="color:var(--azul);">Alianza educativa</h3>
+          <p>Un colegio que recomiende el módulo a sus estudiantes. Sin costo. Solo voluntad y una firma.</p>
+        </div>
+        <div class="card" style="background:rgba(255,214,10,0.06);border-color:rgba(255,214,10,0.2);">
+          <h3 style="color:var(--amarillo);">Espacio en comodato</h3>
+          <p>Una JAC, biblioteca o empresa que preste 15m² por 3 meses para demostrar el modelo.</p>
+        </div>
+      </div>
+      <div style="margin-top:1.5rem;padding:1.2rem;background:var(--gris2);border-radius:10px;text-align:center;">
+        <p
+          style="font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;color:var(--blanco);margin-bottom:0.3rem;">
+          No le pedimos que crea en nosotros.</p>
+        <p style="color:var(--verde);">Le pedimos 3 meses para demostrarle con números reales.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+     SECCIÓN 6: ECOSISTEMA VIVO (CONEXIÓN)
+══════════════════════════════════════════════════ -->
+  <section id="ecosistema">
+    <div class="section-label">Conexión con el Proyecto Principal</div>
+    <h1>El <span style="color:var(--verde)">Ecosistema</span> Vivo</h1>
+    <p style="max-width:600px; margin-bottom:2rem;">Esta propuesta de valor financiera no es solo teoría. Está anclada
+      al ecosistema de herramientas tecnológicas funcionales que ya hemos desarrollado. Explora los módulos vivos del
+      proyecto:</p>
+
+    <div class="grid-2">
+      <!-- Tarjeta Pizarra -->
+      <div class="card card-accent"
+        style="display:flex; flex-direction:column; justify-content:space-between; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:-20px; right:-20px; font-size:6rem; opacity:0.03;">✏️</div>
+        <div>
+          <div class="badge badge-verde">Software de Tutorías</div>
+          <h3 style="margin-bottom:0.5rem; color:var(--verde);">Pizarra Interactiva MULTIPLICA</h3>
+          <p style="font-size:0.85rem; margin-bottom:1rem;">El motor matemático y lienzo digital en tiempo real donde
+            los tutores enseñan a los niños. Cuenta con herramientas de dibujo avanzado y una interfaz diseñada para ser
+            usada en el Módulo Carrito.</p>
+        </div>
+        <a href="#"
+          style="display:inline-block; text-align:center; background:var(--verde); color:#000; font-weight:bold; padding:0.8rem; border-radius:8px; text-decoration:none; text-transform:uppercase; letter-spacing:1px; margin-top:1rem; box-shadow:0 0 15px rgba(57,255,20,0.4); transition:0.3s;"
+          onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">Lanzar Pizarra
+          Maker ↗</a>
+      </div>
+
+      <!-- Tarjeta Mapa -->
+      <div class="card card-info"
+        style="display:flex; flex-direction:column; justify-content:space-between; position:relative; overflow:hidden;">
+        <div style="position:absolute; top:-20px; right:-20px; font-size:6rem; opacity:0.03;">🗺️</div>
+        <div>
+          <div class="badge badge-azul">Despliegue Territorial</div>
+          <h3 style="margin-bottom:0.5rem; color:var(--azul);">Red de Kioscos (Mapa)</h3>
+          <p style="font-size:0.85rem; margin-bottom:1rem;">El mapa interactivo geolocalizado que rastrea los nodos de
+            intervención en los parques de la ciudad, mostrando zonas calientes y la ubicación exacta donde operarán los
+            módulos.</p>
+        </div>
+        <a href="#"
+          style="display:inline-block; text-align:center; background:transparent; border:1px solid var(--azul); color:var(--azul); font-weight:bold; padding:0.8rem; border-radius:8px; text-decoration:none; text-transform:uppercase; letter-spacing:1px; margin-top:1rem; transition:0.3s;"
+          onmouseover="this.style.background='var(--azul)'; this.style.color='#000'; this.style.boxShadow='0 0 15px rgba(0,240,255,0.4)';"
+          onmouseout="this.style.background='transparent'; this.style.color='var(--azul)'; this.style.boxShadow='none';">Abrir
+          Mapa Satelital ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <script src="plan_app.js"></script>
+
+  <!-- MODAL LIGHTBOX PARA IMÁGENES -->
+  <div id="image-modal"
+    style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.95); z-index:10000; justify-content:center; align-items:center; cursor:zoom-out; backdrop-filter:blur(5px);"
+    onclick="this.style.display='none'">
+    <div
+      style="position:absolute; top:2rem; right:2rem; color:#fff; font-family:var(--font-mono); font-weight:bold; font-size:1.5rem; cursor:pointer;">
+      [ X ] CERRAR</div>
+    <img id="modal-img" src=""
+      style="max-width:90%; max-height:90%; border-radius:8px; box-shadow:0 0 40px rgba(0,240,255,0.4); border:1px solid rgba(255,255,255,0.1);">
+  </div>
+
+</body>
+
+</html>
